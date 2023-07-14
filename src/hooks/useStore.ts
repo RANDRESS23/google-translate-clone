@@ -1,10 +1,10 @@
 import { useReducer } from 'react'
 import { type ACTION, TRANSLATOR_ACTION_TYPES, type Translator, type STORE, type Language, type FromLanguage } from '../models/Translator'
-import { AUTO_LANGUAGE } from '../constants'
+import { AUTO_LANGUAGE, SUPPORTED_LANGUAGES } from '../constants'
 
 const initialState: Translator = {
   fromLanguage: 'auto',
-  toLanguage: 'en',
+  toLanguage: SUPPORTED_LANGUAGES.en as Language,
   fromText: '',
   result: '',
   loading: false
